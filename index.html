@@ -14,241 +14,62 @@
 
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
     <!-- Custom CSS -->
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
-    <style>
-        /* Essential Reset */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Body Styling */
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #656565;
-            background-color: #f3f3f3;
-        }
-
-        /* Header and Text Styling */
-        h1, h5 {
-            color: #212121;
-            font-weight: 700;
-        }
-
-        /* Card Styling */
-        .card {
-            border: none;
-            border-radius: 0.5rem;
-        }
-
-        .card-title {
-            font-weight: 700;
-        }
-
-        .card-text {
-            color: #656565;
-        }
-
-        /* Button Customization */
-        .btn-primary {
-            background-color: #7AB730;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #669928;
-        }
-
-        /* Footer Styling */
-        .bg-light py-4 {
-            background-color: #f4f4f4;
-            color: #656565;
-        }
-
-        .fab{
-        color: #7AB730;
-        }
-
-        /* Styles for destinations and contact details */
-        /* Section Headers */
-        h2 {
-        font-weight: 700;
-        color: #212121;
-        margin-bottom: 0.5rem;
-        }
-
-        .lead {
-        color: #656565;
-        font-weight: 300;
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-        }
-
-        /* Destinations Card Styling */
-        .card {
-        border: none;
-        border-radius: 0.5rem;
-        }
-
-        .card-title {
-        font-weight: 700;
-        color: #212121;
-        }
-
-        .card-text {
-        color: #656565;
-        }
-
-        /* Contact Form Styling */
-        .contact-form .form-control {
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
-        }
-
-        .contact-form label {
-        font-weight: 500;
-        color: #212121;
-        }
-
-        .contact-form .btn-primary {
-        background-color: #7AB730;
-        border: none;
-        }
-
-        .contact-form .btn-primary:hover {
-        background-color: #669928;
-        }
-
-        /* Zoom Effect for Card Images */
-        .card img {
-        transition: transform 0.3s ease; /* Smooth transition */
-        }
-
-        .card:hover img {
-        transform: scale(1.1); /* Zoom-in effect */
-        }
-
-
-        /* Responsive Section Spacing */
-        @media (max-width: 768px) {
-        .lead {
-            font-size: 1rem;
-        }
-        }
-
-        /* About Section */
-        /* Slogan Section */
-        .slogan {
-        font-size: 2rem;
-        color: #212121;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        }
-
-        /* Why Choose Us Section */
-        .card i {
-        color: #7AB730;
-        }
-
-        .card-title {
-        font-weight: 700;
-        color: #212121;
-        }
-
-        .card-text {
-        color: #656565;
-        }
-
-        /* Services Section */
-        .card i {
-        color: #7AB730;
-        }
-
-        .card-title {
-        font-weight: 700;
-        color: #212121;
-        }
-
-        .card-text {
-        color: #656565;
-        }
-
-        /*Log In */
-
-        /* Optional Styling for Input Icons */
-        .input-group-text {
-        background-color: #f8f9fa;
-        color: #7AB730;
-        border: none;
-        }
-
-        .input-group-text i {
-        font-size: 1.1rem;
-        }
-
-        .magnified {
-            transform: scale(1.5);
-            transition: transform 0.3s ease;
-        }
-    </style>
+    <link href="css/style.css" rel="stylesheet">
     <script>
         function speech(){
             const startRecognitionButton = document.getElementById('start-recognition');
-const speechOutput = document.getElementById('speech-output');
+            const speechOutput = document.getElementById('speech-output');
 
-if ('webkitSpeechRecognition' in window) {
-    const recognition = new webkitSpeechRecognition();
-    recognition.continuous = false;
-    recognition.interimResults = false;
-    recognition.lang = 'en-US';
-
-    recognition.onstart = function() {
-        startRecognitionButton.textContent = 'Listening...';
-    };
-
-    recognition.onresult = function(event) {
-        const transcript = event.results[0][0].transcript.toLowerCase();
-        speechOutput.textContent = 'You said: ' + transcript;
-
-        // Navigation commands
-        if (transcript.includes('home')) {
-            window.location.href = '#';
-        } else if (transcript.includes('about')) {
-            window.location.href = 'about.html';
-        } else if (transcript.includes('services')) {
-            window.location.href = 'service.html';
-        } else if (transcript.includes('destinations')) {
-            window.location.href = 'destination.html';
-        } else if (transcript.includes('packages')) {
-            window.location.href = 'package.html';
-        } else if (transcript.includes('contact')) {
-            window.location.href = 'contact.html';
-        } else if (transcript.includes('logout')) {
-            window.location.href = 'index.html';
+        if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+        
+            recognition.onstart = function() {
+                startRecognitionButton.textContent = 'Listening...';
+            };
+        
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript.toLowerCase();
+                speechOutput.textContent = 'You said: ' + transcript;
+        
+                // Navigation commands
+                if (transcript.includes('home')) {
+                    window.location.href = '#';
+                } else if (transcript.includes('about')) {
+                    window.location.href = 'about.html';
+                } else if (transcript.includes('services')) {
+                    window.location.href = 'service.html';
+                } else if (transcript.includes('destinations')) {
+                    window.location.href = 'destination.html';
+                } else if (transcript.includes('packages')) {
+                    window.location.href = 'package.html';
+                } else if (transcript.includes('contact')) {
+                    window.location.href = 'contact.html';
+                } else if (transcript.includes('logout')) {
+                    window.location.href = 'index.html';
+                } else {
+                    speechOutput.textContent += ' - Command not recognized.';
+                }
+            };
+        
+            recognition.onerror = function(event) {
+                speechOutput.textContent = 'Error occurred in recognition: ' + event.error;
+            };
+        
+            recognition.onend = function() {
+                startRecognitionButton.textContent = 'Start Speech Recognition';
+            };
+        
+            startRecognitionButton.onclick = function() {
+                recognition.start();
+            };
         } else {
-            speechOutput.textContent += ' - Command not recognized.';
+            speechOutput.textContent = 'Speech recognition not supported in this browser.';
         }
-    };
-
-    recognition.onerror = function(event) {
-        speechOutput.textContent = 'Error occurred in recognition: ' + event.error;
-    };
-
-    recognition.onend = function() {
-        startRecognitionButton.textContent = 'Start Speech Recognition';
-    };
-
-    startRecognitionButton.onclick = function() {
-        recognition.start();
-    };
-} else {
-    speechOutput.textContent = 'Speech recognition not supported in this browser.';
-}
-
-        }
+        
+    }
     </script>
 </head>
 <body>
