@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAVELER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+    <!-- Custom CSS -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <style>
+        /* Essential Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #656565;
+            background-color: #f3f3f3;
+        }
+
+        /* Header and Text Styling */
+        h1, h5 {
+            color: #212121;
+            font-weight: 700;
+        }
+
+        /* Card Styling */
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+        }
+
+        .card-title {
+            font-weight: 700;
+        }
+
+        .card-text {
+            color: #656565;
+        }
+
+        /* Button Customization */
+        .btn-primary {
+            background-color: #7AB730;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #669928;
+        }
+
+        /* Footer Styling */
+        .bg-light py-4 {
+            background-color: #f4f4f4;
+            color: #656565;
+        }
+
+        .fab{
+        color: #7AB730;
+        }
+
+        /* Styles for destinations and contact details */
+        /* Section Headers */
+        h2 {
+        font-weight: 700;
+        color: #212121;
+        margin-bottom: 0.5rem;
+        }
+
+        .lead {
+        color: #656565;
+        font-weight: 300;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        }
+
+        /* Destinations Card Styling */
+        .card {
+        border: none;
+        border-radius: 0.5rem;
+        }
+
+        .card-title {
+        font-weight: 700;
+        color: #212121;
+        }
+
+        .card-text {
+        color: #656565;
+        }
+
+        /* Contact Form Styling */
+        .contact-form .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        }
+
+        .contact-form label {
+        font-weight: 500;
+        color: #212121;
+        }
+
+        .contact-form .btn-primary {
+        background-color: #7AB730;
+        border: none;
+        }
+
+        .contact-form .btn-primary:hover {
+        background-color: #669928;
+        }
+
+        /* Zoom Effect for Card Images */
+        .card img {
+        transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .card:hover img {
+        transform: scale(1.1); /* Zoom-in effect */
+        }
+
+
+        /* Responsive Section Spacing */
+        @media (max-width: 768px) {
+        .lead {
+            font-size: 1rem;
+        }
+        }
+
+        /* About Section */
+        /* Slogan Section */
+        .slogan {
+        font-size: 2rem;
+        color: #212121;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        }
+
+        /* Why Choose Us Section */
+        .card i {
+        color: #7AB730;
+        }
+
+        .card-title {
+        font-weight: 700;
+        color: #212121;
+        }
+
+        .card-text {
+        color: #656565;
+        }
+
+        /* Services Section */
+        .card i {
+        color: #7AB730;
+        }
+
+        .card-title {
+        font-weight: 700;
+        color: #212121;
+        }
+
+        .card-text {
+        color: #656565;
+        }
+
+        /*Log In */
+
+        /* Optional Styling for Input Icons */
+        .input-group-text {
+        background-color: #f8f9fa;
+        color: #7AB730;
+        border: none;
+        }
+
+        .input-group-text i {
+        font-size: 1.1rem;
+        }
+
+        .magnified {
+            transform: scale(1.5);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAVELER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Your existing styles */
+        .magnified {
+            transform: scale(1.5);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Skip to content link -->
+<a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation" aria-label="Main navigation">
+    <a class="navbar-brand" href="#">TRAVELER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link" href="package.html">Tour Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Main Content -->
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h1>Welcome to TRAVELER</h1>
+        <p class="lead">Explore the world with us.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="img/destination-1.jpg" class="card-img-top" alt="Sample Image">
+                <div class="card-body">
+                    <h5 class="card-title">Amazing Destinations</h5>
+                    <p class="card-text">Discover breathtaking destinations around the globe.</p>
+                    <a href="destination.html" class="btn btn-primary" style="background-color: #669928;">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="img/package-2.jpg" class="card-img-top" alt="Sample Image">
+                <div class="card-body">
+                    <h5 class="card-title">Unforgettable Experiences</h5>
+                    <p class="card-text">Join us for an experience of a lifetime.</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #669928;">Discover More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="img/destination-2.jpg" class="card-img-top" alt="Sample Image">
+                <div class="card-body">
+                    <h5 class="card-title">Exclusive Offers</h5>
+                    <p class="card-text">Take advantage of exclusive travel offers.</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #669928;">Check Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Speech Recognition Button -->
+<div class="text-center mt-4">
+    <button id="start-recognition" class="btn btn-secondary">Start Speech Recognition</button>
+    <p id="speech-output" class="mt-3"></p>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light py-4">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <p><i class="fa fa-envelope mr-2"></i>travelspere@example.com</p>
+                    <p class="text-body px-3">|</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-primary px-3" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-primary px-3" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-primary px-3" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="m-0">© 2024 Travelspere. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- JavaScript (Bootstrap and jQuery) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    (function ($) {
+    "use strict";
+        
+        // Dropdown on mouse hover
+        $(document).ready(function () {
+            function toggleNavbarMethod() {
+                if ($(window).width() > 992) {
+                    $('.navbar .dropdown').on('mouseover', function () {
+                        $('.dropdown-toggle', this).trigger('click');
+                    }).on('mouseout', function () {
+                        $('.dropdown-toggle', this).trigger('click').blur();
+                    });
+                } else {
+                    $('.navbar .dropdown').off('mouseover').off('mouseout');
+                }
+            }
+            toggleNavbarMethod();
+            $(window).resize(toggleNavbarMethod);
+        });
+        
+        
+        // Back to top button
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.back-to-top').fadeIn('slow');
+            } else {
+                $('.back-to-top').fadeOut('slow');
+            }
+        });
+        $('.back-to-top').click(function () {
+            $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+            return false;
+        });
+
+
+        // Date and time picker
+        $('.date').datetimepicker({
+            format: 'L'
+        });
+        $('.time').datetimepicker({
+            format: 'LT'
+        });
+
+        // Magnification toggle
+        $('#magnify-image').on('click', function() {
+            $(this).toggleClass('magnified');
+        });
+
+        // Speech Recognition
+        const startRecognitionButton = document.getElementById('start-recognition');
+        const speechOutput = document.getElementById('speech-output');
+
+        if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+
+            recognition.onstart = function() {
+                startRecognitionButton.textContent = 'Listening...';
+            };
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript.toLowerCase();
+                speechOutput.textContent = 'You said: ' + transcript;
+
+                // Navigation commands
+                if (transcript.includes('home')) {
+                    window.location.href = '#';
+                } else if (transcript.includes('about')) {
+                    window.location.href = 'about.html';
+                } else if (transcript.includes('services')) {
+                    window.location.href = 'service.html';
+                } else if (transcript.includes('destinations')) {
+                    window.location.href = 'destination.html';
+                } else if (transcript.includes('packages')) {
+                    window.location.href = 'package.html';
+                } else if (transcript.includes('contact')) {
+                    window.location.href = 'contact.html';
+                } else if (transcript.includes('logout')) {
+                    window.location.href = 'index.html';
+                } else {
+                    speechOutput.textContent += ' - Command not recognized.';
+                }
+            };
+
+            recognition.onerror = function(event) {
+                speechOutput.textContent = 'Error occurred in recognition: ' + event.error;
+            };
+
+            recognition.onend = function() {
+                startRecognitionButton.textContent = 'Start Speech Recognition';
+            };
+            startRecognitionButton.onclick = function() {
+                recognition.start();
+            };
+        } else {
+            speechOutput.textContent = 'Speech recognition not supported in this browser.';
+        }
+        
+    
+    })(jQuery);
+
+
+</script>
+</body>
+</html>
