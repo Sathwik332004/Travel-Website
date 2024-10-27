@@ -1,0 +1,174 @@
+/* Essential Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #656565;
+    background-color: #f3f3f3;
+}
+
+/* Header and Text Styling */
+h1, h5 {
+    color: #212121;
+    font-weight: 700;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-text {
+    color: #656565;
+}
+
+/* Button Customization */
+.btn-primary {
+    background-color: #7AB730;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #669928;
+}
+
+/* Footer Styling */
+.bg-light py-4 {
+    background-color: #f4f4f4;
+    color: #656565;
+}
+
+.fab{
+  color: #7AB730;
+}
+
+/* Styles for destinations and contact details */
+/* Section Headers */
+h2 {
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  color: #656565;
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Destinations Card Styling */
+.card {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #212121;
+}
+
+.card-text {
+  color: #656565;
+}
+
+/* Contact Form Styling */
+.contact-form .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #212121;
+}
+
+.contact-form .btn-primary {
+  background-color: #7AB730;
+  border: none;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #669928;
+}
+
+/* Zoom Effect for Card Images */
+.card img {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Zoom-in effect */
+}
+
+
+/* Responsive Section Spacing */
+@media (max-width: 768px) {
+  .lead {
+      font-size: 1rem;
+  }
+}
+
+/* About Section */
+/* Slogan Section */
+.slogan {
+  font-size: 2rem;
+  color: #212121;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Why Choose Us Section */
+.card i {
+  color: #7AB730;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #212121;
+}
+
+.card-text {
+  color: #656565;
+}
+
+/* Services Section */
+.card i {
+  color: #7AB730;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #212121;
+}
+
+.card-text {
+  color: #656565;
+}
+
+/*Log In */
+
+/* Optional Styling for Input Icons */
+.input-group-text {
+  background-color: #f8f9fa;
+  color: #7AB730;
+  border: none;
+}
+
+.input-group-text i {
+  font-size: 1.1rem;
+}
+
+
