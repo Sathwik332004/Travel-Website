@@ -81,6 +81,10 @@ h2 {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
+button a{
+  text-decoration: none;
+  color: #212121;
+}
 
 /* Destinations Card Styling */
 .card {
