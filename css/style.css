@@ -12,6 +12,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #656565;
     background-color: #f3f3f3;
+
 }
 
 /* Header and Text Styling */
@@ -55,6 +56,14 @@ h1, h5 {
 }
 
 .fab{
+  color: #7AB730;
+}
+
+.navbar-nav ml-auto{
+  color: #212121;
+}
+
+.navbar-nav ml-auto:hover{
   color: #7AB730;
 }
 
@@ -117,6 +126,17 @@ h2 {
   transform: scale(1.1); /* Zoom-in effect */
 }
 
+.navbar {
+  position:fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Add padding to the top of the page content to prevent overlap */
+body {
+  padding-top: 70px; /* Adjust based on navbar height */
+}
 
 /* Responsive Section Spacing */
 @media (max-width: 768px) {
@@ -179,25 +199,28 @@ h2 {
 .button-same-size {
   width: 200px; /* Set to your preferred width */
 }
-
-@media (max-width: 576px) {
-    .footer p, .footer a {
-        font-size: 14px;
-    }
-    .footer .d-flex {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Responsive styling for the button layout */
 @media (max-width: 768px) {
-  .d-flex {
+  .bf{
       flex-direction: column;
   }
-  #start-recognition, #toggle-speech {
+  .button-same-size {
       width: 100%;
       margin-bottom: 10px;
   }
 }
+
+@media (max-width: 576px) {
+  .footer p, .footer a {
+      font-size: 10px;
+  }
+  .footer .d-flex {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
+
+
 

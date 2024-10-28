@@ -4,6 +4,7 @@ body, html {
     margin: 0;
     display: flex;
     flex-direction: column;
+    
 }
 
 /* Main content to take up remaining space */
