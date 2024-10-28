@@ -40,6 +40,10 @@ h1, h5 {
     border: none;
 }
 
+.error-message{
+  color: red;
+}
+
 .btn-primary:hover {
     background-color: #669928;
 }
@@ -171,4 +175,29 @@ h2 {
   font-size: 1.1rem;
 }
 
+/* Ensuring both buttons have the same size */
+.button-same-size {
+  width: 200px; /* Set to your preferred width */
+}
+
+@media (max-width: 576px) {
+    .footer p, .footer a {
+        font-size: 14px;
+    }
+    .footer .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsive styling for the button layout */
+@media (max-width: 768px) {
+  .d-flex {
+      flex-direction: column;
+  }
+  #start-recognition, #toggle-speech {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
 
